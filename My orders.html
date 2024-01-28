@@ -21,14 +21,7 @@
             opacity: 0.8;
         }
 
-        #In-progress,
-        #Finished {
-            width: 100%;
-            padding: 50px 0;
-            text-align: center;
-            background-color: lightblue;
-            margin-top: 20px;
-        }
+        
     </style>
 </head>
 
@@ -38,9 +31,6 @@
         <button onclick="document.getElementById('Order-history')" style="width:auto;">Order History</button>
         <button onclick="document.getElementById('To-be-paid')" style="width:auto;">To be
             paid</button>
-        <button onclick="myFunction(1)" style="width:auto;">In
-            Progress</button>
-        <button onclick="myFunction()" style="width:auto;">Finished</button>
     </div>
 
     function replace( hide, show ) {
@@ -49,41 +39,8 @@
     }
 
     <div id="Order History" style="display:block" onclick="replace('div1','div2')">...</div>
-    <div id="In-progress" style="display:none" onclick="replace('div2','div3')">..</div>
-    <div id="" style="display:none" onclick="replace('div3','div4')">..</div>
-
-    <!--In Progress-->
-    <div id="In-progress">
-        <p>Order number:</p>
-        <p>There are # orders before you.</p>
-        <p>It takes # minutes to finish your order!</p>
-
-        <script>
-            function myFunction() {
-                var x = document.getElementById("In-progress");
-                if (x.style.display === "none") {
-                    x.style.display = "block";
-                } else {
-                    x.style.display = "none";
-                }
-            }
-        </script>
-    </div>
-
-    <div id="Finished">
-        <p>Enjoy your meal!</p>
-
-        <script>
-            function myFunction() {
-                var x = document.getElementById("Finished");
-                if (x.style.display === "none") {
-                    x.style.display = "block";
-                } else {
-                    x.style.display = "none";
-                }
-            }
-        </script>
-    </div>
+    <div id="To be paid" style="display:none" onclick="replace('div2','div3')">..</div>
+ 
 
 </body>
 
